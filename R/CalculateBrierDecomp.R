@@ -117,9 +117,10 @@ CalculateBrierDecomp <- function(p, y, n.bins) {
   ######
   # REL'
   ######
-  d.rel2.d.a <- -1 * ((cs.B - cs.C) * (cs.B - cs.C) - 
-                      (cs.A * cs.B) / (cs.A - 1) - 
-                      cs.B * (cs.B - cs.A) / (cs.A - 1) / (cs.A - 1)
+  d.rel2.d.a <- -1 * ((cs.B - cs.C) * (cs.B - cs.C) + 
+                      (cs.B * cs.B) / (cs.A - 1) - 
+                      cs.A * cs.B * (cs.A - cs.B) / 
+		      (cs.A - 1) / (cs.A - 1)
                      ) / (n * cs.A * cs.A)
   d.rel2.d.b <- (2 * cs.B - 1) / (n * cs.A - n) - 2 * cs.C / (n * cs.A)
   d.rel2.d.c <- -2 * (cs.B - cs.C) / (n * cs.A)
@@ -142,7 +143,7 @@ CalculateBrierDecomp <- function(p, y, n.bins) {
                  ((cs.A - cs.B) * (cs.A - cs.B) - cs.B * (cs.B - 1))
   d.res2.d.b <- 2 / n * (cs.B / cs.A - cs.Y / n) - (cs.A - 2 * cs.B) /
                 (n * cs.A * (cs.A - 1))
-  d.res2.d.y <- (n - 2 * cs.Y) / n / n / n / (n - 1)
+  d.res2.d.y <- (n - 2 * cs.Y) / n / n / (n - 1)
   if (length(d1) > 0) {
     d.res2.d.a[d1] <- 0
     d.res2.d.b[d1] <- 0

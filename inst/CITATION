@@ -1,18 +1,18 @@
 citHeader("To cite package bride in publications use:")
-     year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date, perl = TRUE)
-     vers <- paste("R package version", meta$Version)
+year <- sub(".*(2[[:digit:]]{3})-.*", "\\1", meta$Date, perl = TRUE)
+vers <- paste(meta$Version)
+pkg.url <- "http://CRAN.r-project.org/package=bride"
      
-     citEntry(entry="Manual",
-              title = 
-                paste("{bride}: Brier Score Decomposition for",
-                      "probabilistic forecasts of binary events"),
-              author = personList(as.person("Stefan Siegert")),
-              year = year,
-              note = vers,
-              url = "http://CRAN.r-project.org/package=bride",
-              textVersion =
-                paste("Stefan Siegert (", year,"). bride: Brier Score ",
-                      "Decomposition for probabilistic forecasts of ",
-                      "binary events. ", vers, ".", sep="")
-             )
+citEntry(entry="Manual",
+title = paste0("{bride}: Brier Score Decomposition for ", 
+              "probabilistic forecasts of binary events"), 
+author = personList(as.person("Stefan Siegert")),
+year = year,
+note = paste0("R package (version ", vers,")"),
+url = pkg.url,
+textVersion = paste0("Stefan Siegert (", year,"). bride: Brier Score ",
+                     "decomposition for probabilistic forecasts of binary ",
+                     "events. R-package (version ", vers, "). ", 
+                     "URL ", pkg.url, ".")
+)
 

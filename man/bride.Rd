@@ -4,7 +4,7 @@
 \alias{print.bride}
 \alias{summary.bride}
 \title{Brier Score Decomposition}
-\description{Decomposes the empirical Brier score into reliability, resolution and uncertainty. Two different estimators for the components are provided: The original estimators proposed by Murphy (1974), and the bias-corrected estimators proposed by Ferro and Fricker (2012). Variances of all the components are estimated. Applies only to probabilistic predictions of binary events.}
+\description{Decomposes the empirical Brier score into reliability, resolution and uncertainty. Two different estimators for the components are provided: The original estimators proposed by Murphy (1974), and the bias-corrected estimators proposed by Ferro and Fricker (2012). Sampling variances of all the components are estimated. This package applies only to probabilistic predictions of binary events.}
 \usage{
   bride(p, y, n.bins=10, \dots)
 }
