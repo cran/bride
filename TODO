@@ -1,0 +1,5 @@
+* update variance estimators from var(x) to mean(x^2)-mean(x)^2
+* citation bibtex: Stefan Siegert & R core team
+* citation: include CRAN address
+
+

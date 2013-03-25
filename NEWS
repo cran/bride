@@ -1,0 +1,19 @@
+NEWS/ChangeLog for bride
+--------------------------------
+
+
+version 1.2    2013-03026
+
+    * changed variable names of variance estimates
+      from "relv" to "rel.var"
+    * updated the calculation of variance estimates
+      (now according to http://arxiv.org/abs/1303.6182)
+    * new method to avoid inconsistent estimators (e.g. rel<0)
+      due to the bias correction (also according to arxiv paper)
+    * removed cross table, binned probabilities from output
+      variables
+
+
+version 1.1    2013-03-11
+
+    * initial release
